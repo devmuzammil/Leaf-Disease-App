@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+.env.*
+
+# logs
+*.log
+logs/
+
+# build
+dist/
+build/
+.expo/
+.expo-shared/
+
+# OS
+.DS_Store
+Thumbs.db
