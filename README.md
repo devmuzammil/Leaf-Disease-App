@@ -2,7 +2,7 @@
 
 **Region-Specific Application for Charsada and Chitral Districts (Khyber Pakhtunkhwa, Pakistan)**
 
-A full-stack leaf disease detection application designed specifically for farmers in Charsada and Chitral. Built with Expo React Native mobile frontend and Express backend, the app helps farmers identify crop diseases using leaf images and provides localized treatment recommendations.
+A full-stack leaf leaf disease detection application designed specifically for farmers in Charsada and Chitral. Built with Expo React Native mobile frontend and Express backend, the app helps farmers identify crop diseases using leaf images and provides localized treatment recommendations.
 
 ## Regional Scope
 
@@ -15,8 +15,8 @@ The app detects diseases from leaf images using AI-powered machine learning, sho
 - Real-time leaf disease prediction using deployed HuggingFace machine learning models
 - Automatic leaf image validation (confirms image is a leaf, rejects other objects)
 - Express backend gateway for API routing, logging, authentication, and prediction history
-- User authentication with JWT tokens and Google OAuth integration
-- Email-based password reset with secure OTP verification
+- User authentication with JWT tokens
+- Email-based password reset with secure OTP verification via Resend API
 - Multi-language support (English, Urdu, and Pashto) for accessibility
 - Text-to-speech functionality for disease recommendations
 - Prediction history with persistent MongoDB storage
@@ -95,7 +95,7 @@ leaf-disease-app/
 - **ML Service Integration** – Proxies predictions to HuggingFace or other model providers
 - **Leaf Validation** – Automatically rejects non-leaf images to ensure accurate predictions
 - **Image Optimization** – Compresses and resizes images (max 800x800, 80% quality) for efficient processing
-- **User Authentication** – JWT-based authentication with Google OAuth support
+- **User Authentication** – JWT-based authentication with email/password
 - **Prediction History** – CRUD operations for storing and retrieving prediction records
 - **Password Reset** – Secure email-based password reset with OTP verification
 - **Request Validation** – Zod schemas ensure data integrity
@@ -229,15 +229,9 @@ For local development, the app automatically detects the Expo host. You can over
    JWT_SECRET=your_jwt_secret_key_here
    JWT_EXPIRY=7d
    
-   # Email Service (for password reset)
-   EMAIL_HOST=smtp.gmail.com
-   EMAIL_PORT=587
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASSWORD=your_app_password
-   EMAIL_FROM=noreply@leafdiseaseapp.com
-   
-   # Optional: Resend API (alternative email service)
+- **Email Service (Resend API for password reset)
    RESEND_API_KEY=your_resend_api_key
+   EMAIL_FROM=noreply@leafdiseaseapp.com
    ```
 
 4. Start the development server:
@@ -328,15 +322,15 @@ The backend will run on `http://localhost:3000`
 - **TypeScript** for type-safe backend code
 - **MongoDB** with Mongoose for data persistence
 - **JWT** for authentication tokens
-- **Google OAuth** for social login
 - **Multer** for file upload handling
 - **Sharp** for image optimization and compression
-- **Nodemailer** for email notifications
+- **Resend API** for email notifications
 - **Bull** for background task queue processing
 - **Helmet** for security headers
 - **CORS** for cross-origin resource sharing
 - **Morgan** for HTTP request logging
 - **Zod** for request validation schemas
+- **Resend** for email service integration
 - **dotenv** for environment configuration
 
 ### Machine Learning
