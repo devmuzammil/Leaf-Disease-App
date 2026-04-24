@@ -2,7 +2,7 @@
 
 **Region-Specific Application for Charsada and Chitral Districts (Khyber Pakhtunkhwa, Pakistan)**
 
-A full-stack leaf leaf disease detection application designed specifically for farmers in Charsada and Chitral. Built with Expo React Native mobile frontend and Express backend, the app helps farmers identify crop diseases using leaf images and provides localized treatment recommendations.
+A full-stack leaf disease detection application designed specifically for farmers in Charsada and Chitral. Built with Expo React Native mobile frontend and Express backend, the app helps farmers identify crop diseases using leaf images and provides localized treatment recommendations.
 
 ## Regional Scope
 
